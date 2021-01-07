@@ -16,5 +16,6 @@ namespace Project.ENTITIES.Models
 
         public virtual Director Director { get; set; }
         public virtual List<MovieArtist> MovieArtists { get; set; }
+        public virtual List<MovieGenre> MovieGenres { get; set; }
     }
 }

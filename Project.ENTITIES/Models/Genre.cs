@@ -12,6 +12,6 @@ namespace Project.ENTITIES.Models
 
         //Relationals Properties
 
-
+        public virtual List<MovieGenre> MovieGenres { get; set; }
     }
 }
