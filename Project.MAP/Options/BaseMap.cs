@@ -1,13 +1,21 @@
-﻿using System;
+﻿using Project.ENTITIES.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Project.MAP.Options
 {
-    class BaseMap
+    public abstract class BaseMap<T> : EntityTypeConfiguration<T> where T : BaseEntity
     {
-        // Halil Dağdelen Buradan devam edicek
+        public BaseMap()
+        {
+            Property(x => x.CreatedDate).HasColumnName("Veri Yaratma Zamanı");
+            Property(x => x.ModifiedDate).HasColumnName("Veri Değiştirilme Zamanı");
+            Property(x => x.DeletedDate).HasColumnName("Veri Silinme Zamanı");
+            Property(x => x.Status).HasColumnName("Veri Durumu").IsOptional();
+        }
     }
 }
