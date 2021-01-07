@@ -51,6 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DesignPatterns\GenericRepository\BaseRep\BaseRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\ArtistRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\DirectorRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\GenreRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\MovieArtistRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\MovieGenreRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\MovieRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\IntRep\IRepository.cs" />
     <Compile Include="DesignPatterns\SingletonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,8 +66,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DesignPatterns\GenericRepository\" />
+    <ProjectReference Include="..\Project.DAL\Project.DAL.csproj">
+      <Project>{c6e93c0c-4a59-4ce0-821b-3de4dc33d62c}</Project>
+      <Name>Project.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.ENTITIES\Project.ENTITIES.csproj">
+      <Project>{0d19c7e1-8caa-47b8-9c8a-5129584ef3d3}</Project>
+      <Name>Project.ENTITIES</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
