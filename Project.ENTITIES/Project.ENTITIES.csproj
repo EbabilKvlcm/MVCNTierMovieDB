@@ -41,7 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\DataStatus.cs" />
+    <Compile Include="Enums\UserRole.cs" />
+    <Compile Include="Models\Artist.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\Director.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieArtist.cs" />
+    <Compile Include="Models\MovieGenre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
